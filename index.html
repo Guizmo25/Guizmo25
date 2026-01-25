@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habbo CMS - Mini</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <aside class="sidebar">
+        <div class="logo">
+          <span class="logo__icon">★</span>
+          <div>
+            <h1>Habbo CMS</h1>
+            <p>Mini tableau de bord</p>
+          </div>
+        </div>
+        <nav>
+          <a class="nav__link nav__link--active" href="#">Tableau</a>
+          <a class="nav__link" href="#articles">Actualités</a>
+          <a class="nav__link" href="#events">Événements</a>
+          <a class="nav__link" href="#staff">Équipe</a>
+          <a class="nav__link" href="#settings">Paramètres</a>
+        </nav>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/80?img=3" alt="Avatar" />
+          <div>
+            <strong>Guizmo</strong>
+            <p>Administrateur</p>
+          </div>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="header">
+          <div>
+            <h2>Bienvenue sur votre CMS Habbo</h2>
+            <p>Gérez votre communauté, les news et les événements en un clic.</p>
+          </div>
+          <button class="primary" id="refreshBtn">Actualiser</button>
+        </header>
+
+        <section class="cards">
+          <article class="card">
+            <h3>News publiées</h3>
+            <p id="publishedCount">0</p>
+            <span>Actuellement en ligne</span>
+          </article>
+          <article class="card">
+            <h3>Brouillons</h3>
+            <p id="draftCount">0</p>
+            <span>À finaliser</span>
+          </article>
+          <article class="card">
+            <h3>Événements</h3>
+            <p>4</p>
+            <span>Cette semaine</span>
+          </article>
+        </section>
+
+        <section class="grid">
+          <div class="panel" id="articles">
+            <div class="panel__header">
+              <div>
+                <h3>Actualités</h3>
+                <p>Publiez des news stylées pour votre hotel.</p>
+              </div>
+              <button class="secondary" id="seedBtn">Réinitialiser demo</button>
+            </div>
+            <div class="articles" id="articlesList"></div>
+          </div>
+
+          <div class="panel" id="editor">
+            <div class="panel__header">
+              <div>
+                <h3>Nouvelle news</h3>
+                <p>Créez une news en quelques secondes.</p>
+              </div>
+            </div>
+            <form id="newsForm" class="form">
+              <label>
+                Titre
+                <input type="text" name="title" placeholder="Nouveau concours pixel" required />
+              </label>
+              <label>
+                Catégorie
+                <select name="category" required>
+                  <option value="Communauté">Communauté</option>
+                  <option value="Event">Event</option>
+                  <option value="Shop">Shop</option>
+                  <option value="Animation">Animation</option>
+                </select>
+              </label>
+              <label>
+                Statut
+                <select name="status" required>
+                  <option value="Publié">Publié</option>
+                  <option value="Brouillon">Brouillon</option>
+                </select>
+              </label>
+              <label>
+                Résumé
+                <textarea
+                  name="summary"
+                  placeholder="Décrivez la news pour votre page d'accueil..."
+                  rows="4"
+                  required
+                ></textarea>
+              </label>
+              <button class="primary" type="submit">Publier la news</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
