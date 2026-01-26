@@ -1,12 +1,16 @@
-- 👋 je suis guizmo
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+# Guizmo25
 
-<!---
-Guizmo25/Guizmo25 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+Script pour extraire automatiquement les fichiers **figuremap** et **figuredata** depuis un bundle Nitro.
+
+## Utilisation
+
+```bash
+python3 scripts/add_habbo_clothing.py /chemin/vers/mon.fichier.nitro --output ./habbo_assets
+```
+
+Le script crée automatiquement deux dossiers :
+
+- `figuremap/`
+- `figuredata/`
+
+Si vous passez un dossier Nitro (déjà extrait), il cherchera les fichiers `figuremap.*` et `figuredata.*` directement dedans.
