@@ -1,0 +1,14 @@
+{
+  "name": "Dragon Hello Kitty",
+  "theme": "Hello Kitty",
+  "type": "mobi",
+  "format": "nitro",
+  "dimensions": {
+    "width": 70,
+    "height": 86,
+    "unit": "px"
+  },
+  "description": "Un dragon mignon inspiré de Hello Kitty, avec un style pastel et des détails doux.",
+  "tags": ["dragon", "hello-kitty", "pastel", "cute"],
+  "notes": "Fichier conceptuel .nitro pour mobi sur mesure."
+}
